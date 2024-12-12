@@ -1,10 +1,14 @@
-from .views import * 
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from django.urls import path
+from .views import *
 
-router= DefaultRouter
-router.register(r'motos', MotoViewSet)
+# Configuração do roteador
+router = DefaultRouter()
+router.register(r'motos', MotoView)
 router.register(r'partsmoto', PartsMotoView)
 router.register(r'users', UserView)
 
-urlpatterns = router.urls
+# URLs da API
+urlpatterns = [
+    path('api/', include(router.urls)),
+]
