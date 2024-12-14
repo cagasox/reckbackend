@@ -11,10 +11,10 @@ class MotoSerializer(serializers.ModelSerializer):
 
 class PartsMotoSerializer(serializers.ModelSerializer):
     class Meta:
+        model = PartsMoto
         fields = '__all__'
-        many = True
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
+        modle = User
         fields = '__all__'
-        many = True
