@@ -32,8 +32,8 @@ class PartsMoto(models.Model):
 
 
 class User(models.Model):
-    email = models.CharField(max_length=200)
-    cpf = models.CharField(max_length=11) 
+    email = models.CharField(max_length=200,unique=True)
+    cpf = models.CharField(max_length=11,unique=True)
     phone = models.CharField(max_length=11)
 
     def __str__(self):

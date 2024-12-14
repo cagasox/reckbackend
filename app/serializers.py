@@ -16,5 +16,6 @@ class PartsMotoSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        modle = User
+        model = User
         fields = '__all__'
+        
